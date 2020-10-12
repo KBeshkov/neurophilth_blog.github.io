@@ -115,7 +115,7 @@ plt.plot(x_reduced[:,0],x_reduced[:,1],'.')
 plt.title('Low dimensional embedding of activity')
 ```
 
-![image info](./pictures/1_pca_act.png)
+![image](./pictures/1_pca_act.png)
 
 Weight matrix
 
@@ -132,7 +132,7 @@ plt.title('The weight matrix')
 
 ```
 
-![image info](./pictures/1_weights.png)
+![image](./pictures/1_weights.png)
 
 Distributions of statistics
 
@@ -152,4 +152,4 @@ plt.title('Distribution of voltage values')
 plt.tight_layout()
 ```
 
-![image info](./pictures/1_statistics.png)
+![image](./pictures/1_statistics.png)
