@@ -1,5 +1,5 @@
 ---
 layout: home
-title: Neurophilth
+title: Home
 permalink: /
 ---
