@@ -148,4 +148,8 @@ plt.title('Distribution of voltage values')
 plt.tight_layout()
 ```
 
+<<<<<<< HEAD
 ![image](./pictures/1_statistics.png)
+=======
+![image](./pictures/1_statistics.png)
+>>>>>>> 60d7572c16ebaa52fcd532db0e39cf859351f4b3
