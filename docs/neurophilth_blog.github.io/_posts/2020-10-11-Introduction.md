@@ -112,7 +112,7 @@ plt.xlabel('Time (t)')
 plt.yticks([])
 ```
 
-![1_activity.png](./1_activity.png)
+![1_activity.png](./assets/1_activity.png)
 
 There are other creative ways to represent neural activity, for example using dimensionality reduction one can represent neural activity as a manifold in 2 or 3 dimensions. In this example activity was reduced by applying Principal Components Analysis (PCA). While this plot may not seem very informative, dimensionality reduction techniques are widely used to find interesting structure in neural activity.
 
@@ -124,7 +124,7 @@ plt.plot(x_reduced[:,0],x_reduced[:,1],'.')
 plt.title('Low dimensional embedding of activity')
 ```
 
-![1_pca_act.png](./1_pca_act.png)
+![1_pca_act.png](./assets/1_pca_act.png)
 
 **Weight matrix**
 
@@ -141,7 +141,7 @@ plt.title('The weight matrix')
 
 ```
 
-![1_weights.png](./1_weights.png)
+![1_weights.png](./assets/1_weights.png)
 
 **Distributions of statistics**
 
@@ -161,4 +161,4 @@ plt.title('Distribution of voltage values')
 plt.tight_layout()
 ```
 
-![1_weights.png](./1_statistics.png)
+![1_weights.png](./assets/1_statistics.png)
