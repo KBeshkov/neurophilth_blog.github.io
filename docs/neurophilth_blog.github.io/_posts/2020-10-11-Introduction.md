@@ -30,7 +30,7 @@ In these articles the focus will most of the time be on BNNs but it is not infea
 Furthermore neurons can receive input from outside the network, what "outside" means is a bit confusing as in the periphery it could mean truly external inputs like light or sound, but it could also mean input coming from another network which we are not considering.
 More abstractly, we will call a neural network something which has the following equation:
 
-<img src="http://www.sciweavers.org/tex2img.php?eq=%5Cdot%7Bx%7D_i%20%3D%20f%28x%2Ct%2CW%2CI%29&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="\dot{x}_i = f(x,t,W,I)" width="126" height="19" />
+<img src="https://latex.codecogs.com/gif.latex?\dot{x_i}=f(x,t,W,I)" title="\dot{x_i}=f(x,t,W,I)" />
 
 On the left-hand side, the dot over x refers to the time derivative, $x_i$ can be any variable which describes the neural activity (this can be anything from voltage, current, firing rate, a binary spike or even the probability of spiking) of neuron number i. On the right hand side x is the activity of all neurons (also known as the network state), t is time, W is the weight matrix which describes how neurons are connected and I are the inputs coming into the network from the outside.
 For the following examples we will use the simplest model called the Integrate and Fire (IF) model, it has the following equations:
