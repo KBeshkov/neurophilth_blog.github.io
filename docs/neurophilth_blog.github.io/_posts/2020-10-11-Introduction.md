@@ -1,3 +1,8 @@
+---
+layout: page
+title: Weekly Neural Networks: Introduction
+permalink: /
+---
 
 From now on, every Saturday, I will try to upload a neural network model based on some interesting mathematical idea or a particular computation that it can perform. Each section in the articles will start simple, but will biuld up in complexity as the reader goes further. The goal of this project is to both educate people in how our brain carries out computations through neural networks and also to potentially provide researchers with interesting ideas which they can develop further or use for inspiration.
 
