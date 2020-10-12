@@ -3,6 +3,7 @@ layout: post
 title:  "Weekly Neural Networks: Introduction"
 date:   2020-10-11 00:02:37 +0200
 categories: Neural_Networks
+permalink: /
 ---
 
 
