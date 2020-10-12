@@ -1,5 +1,5 @@
 ---
 layout: home
-title:  "Welcome to Jekyll!"
+title:  "Blog"
 permalink: /
 ---
