@@ -1,4 +1,5 @@
-
+---
 layout: page
-title: test
+title:  "Welcome to Jekyll!"
 permalink: /
+---
