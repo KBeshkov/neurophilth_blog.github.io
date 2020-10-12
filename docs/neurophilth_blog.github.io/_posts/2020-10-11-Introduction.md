@@ -35,7 +35,9 @@ More abstractly, we will call a neural network something which has the following
 
 On the left-hand side, the dot over x refers to the time derivative, <img src="https://latex.codecogs.com/gif.latex?x_i" title="x_i" /> can be any variable which describes the neural activity (this can be anything from voltage, current, firing rate, a binary spike or even the probability of spiking) of neuron number i. On the right hand side x is the activity of all neurons (also known as the network state), t is time, W is the weight matrix which describes how neurons are connected and I are the inputs coming into the network from the outside.
 For the following examples we will use the simplest model called the Integrate and Fire (IF) model, it has the following equations:
+
 <img src="https://latex.codecogs.com/gif.latex?\dot{x}_i&space;=&space;-(x-x_{rest})&plus;\sum_j{W_{ij}\cdot&space;s_j(t)}&space;&plus;&space;I_i(t)" title="\dot{x}_i = -(x-x_{rest})+\sum_j{W_{ij}\cdot s_j(t)} + I_i(t)" />
+
 <img src="https://latex.codecogs.com/gif.latex?x_{rest}" title="x_{rest}" /> (=-60) is the resting potential which cells tend to go back to after receiving an input and <img src="https://latex.codecogs.com/gif.latex?s_j(t))" title="s_j(t))" /> is a binary vector encoding whether neuron j spikes at time t, this is important because in the model two neurons can only interact if one of them spikes. In addition there are two other paramters the spiking threshold (=0) and the reset potential (=-70). Whenever the activity of the neuron passes the threshold, we say that it has spiked and reset the potential to the second value - the reset potential.
 
 Other central ideas in understanding neural networks like computation, representation and coding, will be explored further in the presentations of particular models.
