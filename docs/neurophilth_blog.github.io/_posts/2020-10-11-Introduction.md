@@ -13,8 +13,11 @@ Here I will a neural network model based on some interesting mathematical idea o
 All articles will be structured in the following way:
 
 A short introduction to the mathematical background or the computational problem which will be necessary for understanding the network.
+
 A description of the model with a focus on the weight matrix and the inputs coming to a network.
+
 A visual representation of network activity, the weight matrix, distributions of different relevant statistics and other figures if necessary.
+
 A final discussion of the properties and potential computation that the network might perform.
 
 
@@ -31,10 +34,14 @@ In these articles the focus will most of the time be on BNNs but it is not infea
 Furthermore neurons can receive input from outside the network, what "outside" means is a bit confusing as in the periphery it could mean truly external inputs like light or sound, but it could also mean input coming from another network which we are not considering.
 More abstractly, we will call a neural network something which has the following equation:
 
+<math id="E1.m1" class="ltx_Math" alttext="t^{(f)}:\quad u(t^{(f)})=\theta_{\rm reset}\quad\text{and}\quad\left.{{\text{d%
+}}u(t)\over{\text{d}}t}\right|_{t=t^{(f)}}&gt;0\,." display="block"><semantics><mrow><msup><mi>t</mi><mrow><mo>(</mo><mi>f</mi><mo>)</mo></mrow></msup><mo>:</mo><mo mathvariant="italic" separator="true"> </mo><mi>u</mi><mrow><mo stretchy="false">(</mo><msup><mi>t</mi><mrow><mo>(</mo><mi>f</mi><mo>)</mo></mrow></msup><mo stretchy="false">)</mo></mrow><mo>=</mo><msub><mi>θ</mi><mi>reset</mi></msub><mo mathvariant="italic" separator="true"> </mo><mtext>and</mtext><mo mathvariant="italic" separator="true">  </mo><mfrac><mrow><mtext>d</mtext><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow></mrow><mrow><mtext>d</mtext><mo>⁢</mo><mi>t</mi></mrow></mfrac><msub><mo>|</mo><mrow><mi>t</mi><mo>=</mo><msup><mi>t</mi><mrow><mo>(</mo><mi>f</mi><mo>)</mo></mrow></msup></mrow></msub><mo>&gt;</mo><mn>0 .</mn></mrow><annotation encoding="application/x-tex">t^{(f)}:\quad u(t^{(f)})=\theta_{\rm reset}\quad\text{and}\quad\left.{{\text{d%
+}}u(t)\over{\text{d}}t}\right|_{t=t^{(f)}}&gt;0\,.</annotation></semantics></math>
+
 <img src="https://latex.codecogs.com/gif.latex?\dot{x_i}=f(x,t,W,I)" title="\dot{x_i}=f(x,t,W,I)" />
 
 On the left-hand side, the dot over x refers to the time derivative, <img src="https://latex.codecogs.com/gif.latex?x_i" title="x_i" /> can be any variable which describes the neural activity (this can be anything from voltage, current, firing rate, a binary spike or even the probability of spiking) of neuron number i. On the right hand side x is the activity of all neurons (also known as the network state), t is time, W is the weight matrix which describes how neurons are connected and I are the inputs coming into the network from the outside.
-For the following examples we will use the simplest model called the Integrate and Fire (IF) model, it has the following equations:
+For the following examples we will use the simplest model called the Integrate and Fire (IF) model (Gerstner et. al. 2014), it has the following equations:
 
 <img src="https://latex.codecogs.com/gif.latex?\dot{x}_i&space;=&space;-(x_i-x_{rest})&plus;\sum_j{W_{ij}\cdot&space;s_j(t)}&space;&plus;&space;I_i(t)" title="\dot{x}_i = -(x-x_{rest})+\sum_j{W_{ij}\cdot s_j(t)} + I_i(t)" />
 
@@ -159,4 +166,11 @@ plt.tight_layout()
 
 ![1_weights.png](./assets/1_statistics.png)
 The firing rate is defined by counting the number of spikes in each row of the raster plot and dividing by time, which means the firing rate is measured in hertz. The voltage values are given by all the different values which the voltage variable x(t) has taken across time and neurons.
+
+**Discussion**
+Hopefully this short introduction gives a good intuition for what is happening in neural networks. In future articles we will look at more exciting networks which also learn to perform tasks or produce interesting activity due to unconventional structure.
+
+**References**
+Gerstner, W., Kistler, W. M., Naud, R., & Paninski, L. (2014). Neuronal dynamics: From single neurons to networks and models of cognition. Cambridge University Press. - This textbook is also available as an ebook online.
+
 
