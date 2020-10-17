@@ -143,7 +143,9 @@ plt.title('The weight matrix')
 ![Weight_matrix](./assets/1_weights.png)
 
 To give a more visual intuition for what the weight matrix means, look at the following plot:
+
 ![Network_Graph](./assets/1_graph.png)
+
 Both of these are the same representation of the connectivity in a network, the first is the weight matrix (more commonly known as the adjacency matrix in graph theory). For example the entries under column A denote the connections going from A to B and C which can also be seen in the graph. Since the columns denote the outgoing connections, the rows denote the incoming connections, so for example node C receives two connections, one from A and one from D.
 
 **Distributions of statistics**
