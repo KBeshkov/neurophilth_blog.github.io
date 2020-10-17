@@ -7,7 +7,7 @@ permalink: /
 ---
 
 
-Here I will present a neural network model based on some interesting mathematical idea or a particular computation that it can perform. Each section in the articles will start simple, but will biuld up in complexity as the reader goes further. The goal of this project is to help people undstand how neural networks carry out computations and also to potentially provide researchers with interesting ideas which they can develop further or use for inspiration. I also hope to get better at expressing ideas through text as the project moves forward.
+Here I will present a neural network model based on some interesting mathematical idea or a particular computation that it can perform. Each section in the articles will start simple, but will build up in complexity as the reader goes further. The goal of this project is to help people understand how neural networks carry out computations and also to potentially provide researchers with interesting ideas which they can develop further or use for inspiration. I also hope to get better at expressing ideas through text as the project moves forward.
 
 
 All articles will be structured in the following way:
@@ -28,10 +28,10 @@ As this is the introduction to the project I will discuss some of the basic part
 **What is a Neural Network?**
 
 Sometimes neural networks are separated into artificial and biological networks, this distinction refers to the neural networks found in the fields of machine learning and computational neuroscience respectively. In reality there is a continuum of neural network models with a varying degree of biological realism. As one would expect in machine learning there is no impetus to even consider biological realism as the goal is to get the network to perform a particular task and adding the messy details of biology will only make things needlessly complicated. On the other hand computational neuroscience does (for the most part) care about biological realism, so the models used there try to reproduce at least some biological details. 
-An insightful difference between the two is that artificial neural networks (ANNs) tend to be written as statistical models which develop in discrete time while biological neural networks (BNNs) tend to be written as differential equations which develop in continuous time. This is because, as a result of the electrochemical mechanisms underlying the activity of the neural networks in our brains, the recordings that neuroscientists are interested in are continuous. Even so, biological neurons also output and communicate with a digital signal composed by spikes (these are discrete bursts in the membrate potential also called action potentials).
-In these articles the focus will most of the time be on BNNs but it is not infeasable that ANNs pop up as well. As the word network implies, neurons are connected to each other with different weights and it is these weights that determine what type of dynamics a network will have. To hammer on the richness of potential different neural networks we can build, note that for N neurons each neuron can connect to N other neurons (we allow the possibility of self-connections) so there will be <img src="https://latex.codecogs.com/gif.latex?N^2" title="N^2" />
+An insightful difference between the two is that artificial neural networks (ANNs) tend to be written as statistical models which develop in discrete time while biological neural networks (BNNs) tend to be written as differential equations which develop in continuous time. This is because, as a result of the electrochemical mechanisms underlying the activity of the neural networks in our brains, the recordings that neuroscientists are interested in are continuous. Even so, biological neurons also output and communicate with a digital signal composed by spikes (these are discrete bursts in the membrane potential also called action potentials).
+In these articles the focus will most of the time be on BNNs but it is not infeasible that ANNs pop up as well. As the word network implies, neurons are connected to each other with different weights and it is these weights that determine what type of dynamics a network will have. To hammer on the richness of potential different neural networks we can build, note that for N neurons each neuron can connect to N other neurons (we allow the possibility of self-connections) so there will be <img src="https://latex.codecogs.com/gif.latex?N^2" title="N^2" />
  connections that have to be specified. If we allow the connections to be either 1 or -1 (*they can continuously vary which implies that there are is an uncountably infinite set of potential networks for any N, but it is not obvious when changes in the weight actually contribute to a qualitative change in the dynamics*), then there are <img src="https://latex.codecogs.com/gif.latex?2^{N^2}" title="2^{N^2}" /> networks that can be made. For example if we take 10 neurons we can build <img src="https://latex.codecogs.com/gif.latex?2^{100}" title="2^{100}" /> networks, the neurons in the human brain are estimated to be around 86 billion.
-Furthermore neurons can receive input from outside the network, what "outside" means is a bit confusing as in the periphery it could mean truly external inputs like light or sound, but it could also mean input coming from another network which we are not considering.
+Furthermore, neurons can receive input from outside the network, what "outside" means is a bit confusing as in the periphery it could mean truly external inputs like light or sound, but it could also mean input coming from another network which we are not considering.
 We will call a neural network something which obeys the following equation:
 
 <img src="https://latex.codecogs.com/gif.latex?\dot{x_i}=f(x,t,W,I)" title="\dot{x_i}=f(x,t,W,I)" />
@@ -41,7 +41,7 @@ For the following examples we will use the simplest model called the Integrate a
 
 <img src="https://latex.codecogs.com/gif.latex?\dot{x}_i&space;=&space;-(x_i-x_{rest})&plus;\sum_j{W_{ij}\cdot&space;s_j(t)}&space;&plus;&space;I_i(t)" title="\dot{x}_i = -(x-x_{rest})+\sum_j{W_{ij}\cdot s_j(t)} + I_i(t)" />
 
-<img src="https://latex.codecogs.com/gif.latex?x_{rest}" title="x_{rest}" /> (=-60) is the resting potential which cells tend to go back to after receiving an input and <img src="https://latex.codecogs.com/gif.latex?s_j(t))" title="s_j(t))" /> is a binary vector encoding whether neuron j spikes at time t, this is important because in the model two neurons can only interact if one of them spikes. In addition there are two other paramters the spiking threshold (=0) and the reset potential (=-70). Whenever the activity of the neuron passes the spiking threshold, we say that it has spiked and reset the potential to the second value - the reset potential.
+<img src="https://latex.codecogs.com/gif.latex?x_{rest}" title="x_{rest}" /> (=-60) is the resting potential which cells tend to go back to after receiving an input and <img src="https://latex.codecogs.com/gif.latex?s_j(t))" title="s_j(t))" /> is a binary vector encoding whether neuron j spikes at time t, this is important because in the model two neurons can only interact if one of them spikes. In addition, there are two other parameters the spiking threshold (=0) and the reset potential (=-70). Whenever the activity of the neuron passes the spiking threshold, we say that it has spiked and reset the potential to the second value - the reset potential.
 
 
 **How to read the plots?**
@@ -87,7 +87,7 @@ x = IF_model(Weights,T,Inputs)
 #calculate some statistics eg. firing rate
 fr = 10*np.sum(x[0],1)/T #multipy by 1 over the integration constant mu=0.1
 
-#perform dimensionality reduction with PCA to show low dimensional embeding of activity
+#perform dimensionality reduction with PCA to show low dimensional embedding of activity
 pca = PCA(n_components=2) #run twice if you get an SVD error
 x_reduced = pca.fit_transform(x[1].T)
 
