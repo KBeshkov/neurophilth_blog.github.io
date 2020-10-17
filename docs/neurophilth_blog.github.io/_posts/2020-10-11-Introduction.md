@@ -32,11 +32,7 @@ An insightful difference between the two is that artificial neural networks (ANN
 In these articles the focus will most of the time be on BNNs but it is not infeasable that ANNs pop up as well. As the word network implies, neurons are connected to each other with different weights and it is these weights that determine what type of dynamics a network will have. To hammer on the richness of potential different neural networks we can build, note that for N neurons each neuron can connect to N other neurons (we allow the possibility of self-connections) so there will be <img src="https://latex.codecogs.com/gif.latex?N^2" title="N^2" />
  connections that have to be specified. If we allow the connections to be either 1 or -1 (*they can continuously vary which implies that there are is an uncountably infinite set of potential networks for any N, but it is not obvious when changes in the weight actually contribute to a qualitative change in the dynamics*), then there are <img src="https://latex.codecogs.com/gif.latex?2^{N^2}" title="2^{N^2}" /> networks that can be made. For example if we take 10 neurons we can build <img src="https://latex.codecogs.com/gif.latex?2^{100}" title="2^{100}" /> networks, the neurons in the human brain are estimated to be around 86 billion.
 Furthermore neurons can receive input from outside the network, what "outside" means is a bit confusing as in the periphery it could mean truly external inputs like light or sound, but it could also mean input coming from another network which we are not considering.
-More abstractly, we will call a neural network something which has the following equation:
-
-<math id="E1.m1" class="ltx_Math" alttext="t^{(f)}:\quad u(t^{(f)})=\theta_{\rm reset}\quad\text{and}\quad\left.{{\text{d%
-}}u(t)\over{\text{d}}t}\right|_{t=t^{(f)}}&gt;0\,." display="block"><semantics><mrow><msup><mi>t</mi><mrow><mo>(</mo><mi>f</mi><mo>)</mo></mrow></msup><mo>:</mo><mo mathvariant="italic" separator="true"> </mo><mi>u</mi><mrow><mo stretchy="false">(</mo><msup><mi>t</mi><mrow><mo>(</mo><mi>f</mi><mo>)</mo></mrow></msup><mo stretchy="false">)</mo></mrow><mo>=</mo><msub><mi>θ</mi><mi>reset</mi></msub><mo mathvariant="italic" separator="true"> </mo><mtext>and</mtext><mo mathvariant="italic" separator="true">  </mo><mfrac><mrow><mtext>d</mtext><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow></mrow><mrow><mtext>d</mtext><mo>⁢</mo><mi>t</mi></mrow></mfrac><msub><mo>|</mo><mrow><mi>t</mi><mo>=</mo><msup><mi>t</mi><mrow><mo>(</mo><mi>f</mi><mo>)</mo></mrow></msup></mrow></msub><mo>&gt;</mo><mn>0 .</mn></mrow><annotation encoding="application/x-tex">t^{(f)}:\quad u(t^{(f)})=\theta_{\rm reset}\quad\text{and}\quad\left.{{\text{d%
-}}u(t)\over{\text{d}}t}\right|_{t=t^{(f)}}&gt;0\,.</annotation></semantics></math>
+We will call a neural network something which obeys the following equation:
 
 <img src="https://latex.codecogs.com/gif.latex?\dot{x_i}=f(x,t,W,I)" title="\dot{x_i}=f(x,t,W,I)" />
 
@@ -168,9 +164,11 @@ plt.tight_layout()
 The firing rate is defined by counting the number of spikes in each row of the raster plot and dividing by time, which means the firing rate is measured in hertz. The voltage values are given by all the different values which the voltage variable x(t) has taken across time and neurons.
 
 **Discussion**
+
 Hopefully this short introduction gives a good intuition for what is happening in neural networks. In future articles we will look at more exciting networks which also learn to perform tasks or produce interesting activity due to unconventional structure.
 
 **References**
-Gerstner, W., Kistler, W. M., Naud, R., & Paninski, L. (2014). Neuronal dynamics: From single neurons to networks and models of cognition. Cambridge University Press. - This textbook is also available as an ebook online.
+
+Gerstner, W., Kistler, W. M., Naud, R., & Paninski, L. (2014). *Neuronal dynamics: From single neurons to networks and models of cognition*. Cambridge University Press. - This textbook is also available as an ebook online.
 
 
