@@ -7,7 +7,7 @@ permalink: /
 ---
 
 
-Here I will a neural network model based on some interesting mathematical idea or a particular computation that it can perform. Each section in the articles will start simple, but will biuld up in complexity as the reader goes further. The goal of this project is to help people undstand how neural networks carry out computations and also to potentially provide researchers with interesting ideas which they can develop further or use for inspiration. I also hope to get better at expressing ideas through text as the project moves forward.
+Here I will present a neural network model based on some interesting mathematical idea or a particular computation that it can perform. Each section in the articles will start simple, but will biuld up in complexity as the reader goes further. The goal of this project is to help people undstand how neural networks carry out computations and also to potentially provide researchers with interesting ideas which they can develop further or use for inspiration. I also hope to get better at expressing ideas through text as the project moves forward.
 
 
 All articles will be structured in the following way:
