@@ -112,7 +112,7 @@ plt.xlabel('Time (t)')
 plt.yticks([])
 ```
 
-![1_activity.png](./assets/1_activity.png)
+![Raster_plot](./assets/1_activity.png)
 
 There are other creative ways to represent neural activity, for example using dimensionality reduction (a method which projects objects in N dimensions to just a few dimensions) one can visualize neural activity as a manifold in 2 or 3 dimensions. In this example activity was reduced by applying Principal Components Analysis (PCA). While this plot may not seem very informative, dimensionality reduction techniques are widely used to find interesting structure in neural activity.
 
@@ -124,7 +124,7 @@ plt.plot(x_reduced[:,0],x_reduced[:,1],'.')
 plt.title('Low dimensional embedding of activity')
 ```
 
-![1_pca_act.png](./assets/1_pca_act.png)
+![PCA_activity](./assets/1_pca_act.png)
 
 **Weight matrix**
 
@@ -140,7 +140,11 @@ plt.title('The weight matrix')
 
 ```
 
-![1_weights.png](./assets/1_weights.png)
+![Weight_matrix](./assets/1_weights.png)
+
+To give a more visual intuition for what the weight matrix means, look at the following plot:
+![Network_Graph](./assets/1_graph.png)
+Both of these are the same representation of the connectivity in a network, the first is the weight matrix (more commonly known as the adjacency matrix in graph theory). For example the entries under column A denote the connections going from A to B and C which can also be seen in the graph. Since the columns denote the outgoing connections, the rows denote the incoming connections, so for example node C receives two connections, one from A and one from D.
 
 **Distributions of statistics**
 
@@ -160,7 +164,7 @@ plt.title('Distribution of voltage values')
 plt.tight_layout()
 ```
 
-![1_weights.png](./assets/1_statistics.png)
+![Statistics](./assets/1_statistics.png)
 The firing rate is defined by counting the number of spikes in each row of the raster plot and dividing by time, which means the firing rate is measured in hertz. The voltage values are given by all the different values which the voltage variable x(t) has taken across time and neurons.
 
 **Discussion**
